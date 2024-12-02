@@ -25,7 +25,7 @@ function SistemaSolar() {
 function About() {
   return (
     <div id="divsobremim">
-      <section id="sobremim" className="sobremim ">
+      <section id="sobremim" className="sobremim mb-44 ">
         <div>
           <h1 className="h1s2 mb-10">Minha órbita</h1>
         </div>

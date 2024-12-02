@@ -52,7 +52,7 @@ const ProjectCard = ({
   backend,
 }) => {
   return (
-    <div className="card">
+    <div id="projetos" className="card ">
       <div className="row">
         <img className="project-image rounded-md" src={image} alt={title} />
         <div className="des">
@@ -224,7 +224,7 @@ function Projetos() {
   ];
 
   return (
-    <section id="projetos" className="projetos">
+    <section id="projetos" className="projetos mb-44 ">
       <div>
         {" "}
         <h1 className="h1s3">Projetos Relevantes</h1>

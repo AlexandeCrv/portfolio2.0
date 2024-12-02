@@ -7,7 +7,7 @@ function SectionMain() {
 
   return (
     <div>
-      <section id="secmain" className="secmain">
+      <section id="secmain" className="secmain mb-44 ">
         <div className="secmainh1h2">
           <h1 className="h1s">Alexandre Carvalho</h1>
           <div className="txt-animado">Desenvolvedor Front End Web</div>

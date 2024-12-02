@@ -110,7 +110,7 @@ const Habilidades = () => {
   };
 
   return (
-    <section id="habilidades" className="habilidades">
+    <section id="habilidades" className="habilidades mb-44 ">
       <h1>Habilidades</h1>
       <div className="grid">
         {techData.map((tech, index) => (
