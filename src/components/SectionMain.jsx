@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { PiReadCvLogoDuotone } from "react-icons/pi";
 import { FaLanguage } from "react-icons/fa";
-
+import Image from "next/image";
 function SectionMain() {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -21,7 +21,12 @@ function SectionMain() {
                 href="https://www.linkedin.com/in/alexandre-carvalho-4b178a26b/"
                 target="_blank"
               >
-                <img src="linkedin.png" alt="Linkedin" />
+                <Image
+                  width={30}
+                  height={30}
+                  src="/linkedin.png"
+                  alt="Linkedin"
+                />{" "}
               </a>
             </div>
             <div
@@ -32,7 +37,12 @@ function SectionMain() {
                 href="https://www.instagram.com/xande.mirandac/"
                 target="_blank"
               >
-                <img src="insta.png" alt="Instagram" />
+                <Image
+                  width={30}
+                  height={30}
+                  src="/insta.png"
+                  alt="Instagram"
+                />
               </a>
             </div>
             <div
@@ -43,7 +53,7 @@ function SectionMain() {
                 href="https://github.com/AlexandeCrv?tab=repositories"
                 target="_blank"
               >
-                <img src="github.png" alt="GitHub" />
+                <Image width={30} height={30} src="/github.png" alt="GitHub" />
               </a>
             </div>
 
@@ -65,11 +75,14 @@ function SectionMain() {
                     className="text-[#fff] hover:bg-white hover:text-black hover:border-0 rounded-md px-4 py-2 duration-300 flex items-center"
                     download
                   >
-                    <img
+                    <Image
+                      width={30}
+                      height={30}
                       src="/brasil.png"
                       alt="Bandeira do Brasil"
                       className="mr-1"
                     />
+
                     <p className="mr-4">Português</p>
                   </a>
                   <a
@@ -78,9 +91,11 @@ function SectionMain() {
                     className="text-[#fff] hover:bg-white hover:text-black hover:border-0 mt-2 rounded-md px-4 py-2 duration-300 flex items-center"
                     download
                   >
-                    <img
+                    <Image
+                      width={30}
+                      height={30}
                       src="/usa.png"
-                      alt="Bandeira dos EUA"
+                      alt="Bandeira do Brasil"
                       className="mr-1"
                     />
                     Inglês

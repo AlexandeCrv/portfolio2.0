@@ -1,12 +1,12 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { FaHome, FaUser, FaProjectDiagram, FaCog } from "react-icons/fa";
 
 function NavBar() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY && currentScrollY > 100) {
@@ -16,15 +16,14 @@ function NavBar() {
     }
 
     setLastScrollY(currentScrollY);
-  };
+  }, [lastScrollY]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
-
+  }, [handleScroll]);
   return (
     <div>
       <header
@@ -33,7 +32,9 @@ function NavBar() {
         }`}
       >
         <div className="mt-3">
-          <strong className="text-4xl text-white">/*</strong>
+          <strong className="text-4xl text-white">
+            <span>{"/*"}</span>
+          </strong>
         </div>
 
         <nav>
@@ -80,7 +81,9 @@ function NavBar() {
           </ul>
         </nav>
         <div className="mt-3">
-          <strong className="text-4xl text-white">*/</strong>
+          <strong className="text-4xl text-white">
+            <span>{"*/"}</span>
+          </strong>
         </div>
       </header>
     </div>

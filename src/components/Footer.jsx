@@ -6,7 +6,6 @@ function Footer() {
   return (
     <footer className="bg-[#0b0b0b] text-white py-8">
       <div className="max-w-7xl mx-auto px-4">
-        {/* Contatos */}
         <div className="text-center">
           <h1 className="text-2xl font-bold mb-4 text-[#00ad6f]">Contatos</h1>
           <div className="flex flex-col items-center gap-2 mb-8">
@@ -15,13 +14,11 @@ function Footer() {
           </div>
         </div>
 
-        {/* Redes Sociais */}
         <div className="text-center">
           <h2 className="text-xl font-semibold mb-4 text-[#00ad6f]">
             Me ache nas redes!
           </h2>
           <div className="flex justify-center gap-6">
-            {/* LinkedIn */}
             <a
               href="https://www.linkedin.com/in/alexandre-carvalho-4b178a26b/"
               target="_blank"
@@ -31,7 +28,7 @@ function Footer() {
               <FaLinkedin className="text-4xl" />
               <span className="text-sm mt-1">/Alexandre-Carvalho</span>
             </a>
-            {/* Instagram */}
+
             <a
               href="https://www.instagram.com/xande.mirandac/"
               target="_blank"
@@ -41,7 +38,7 @@ function Footer() {
               <FaInstagram className="text-4xl" />
               <span className="text-sm mt-1">/xande.mirandac</span>
             </a>
-            {/* GitHub */}
+
             <a
               href="https://github.com/AlexandeCrv?tab=repositories"
               target="_blank"
@@ -54,10 +51,15 @@ function Footer() {
           </div>
         </div>
 
-        {/* Rodapé */}
         <div className="mt-8 text-center border-t border-gray-700 pt-4">
           <p className="text-sm">
-            <strong>/*</strong> © 2024 / Alexandre Carvalho <strong>/*</strong>
+            <strong>
+              <span>{"/*"}</span>
+            </strong>{" "}
+            © 2024 / Alexandre Carvalho{" "}
+            <strong>
+              <span>{"*/"}</span>
+            </strong>
           </p>
         </div>
       </div>

@@ -1,11 +1,18 @@
 import React from "react";
+import Image from "next/image";
 
 function SistemaSolar() {
   return (
     <div className="sistema-solar mr-20 mt-20">
       <div className="container">
         <div className="sun">
-          <img src="/sun.png" className="roudended-full img" alt="sun" />
+          <Image
+            src="/sun.png"
+            width={110}
+            height={120}
+            alt="sun"
+            className="img"
+          />{" "}
         </div>
         <div className="mercury"></div>
         <div className="venus"></div>
@@ -39,7 +46,7 @@ function About() {
             </p>
             <div className="">
               {" "}
-              <strong>/*</strong>
+              <strong>{"/*"}</strong>
             </div>
             <p>
               {" "}
@@ -57,7 +64,11 @@ function About() {
                 A cada linha de código, busco criar interfaces que façam a
                 diferença.
               </p>
-              <strong>/*</strong>
+              <strong>
+                <strong>
+                  <span>{"*/"}</span>
+                </strong>
+              </strong>
               <p>
                 Estou sempre aberto a novas opotunidades e desafios. Vamos
                 conversar?
@@ -72,7 +83,12 @@ function About() {
                       href="https://www.linkedin.com/in/alexandre-carvalho-4b178a26b/"
                       target="_blank"
                     >
-                      <img src="linkedin.png" alt="" />
+                      <Image
+                        src="/linkedin.png"
+                        width={30}
+                        height={30}
+                        alt="linkedin"
+                      />{" "}
                     </a>
                   </div>
                 </div>
@@ -86,7 +102,12 @@ function About() {
                         href="https://www.instagram.com/xande.mirandac/"
                         target="_blank"
                       >
-                        <img src="insta.png" alt="" />
+                        <Image
+                          src="/insta.png"
+                          width={30}
+                          height={30}
+                          alt="insta"
+                        />
                       </a>
                     </div>
                   </div>
@@ -99,7 +120,12 @@ function About() {
                     href="https://github.com/AlexandeCrv?tab=repositories"
                     target="_blank"
                   >
-                    <img src="github.png" alt="" />
+                    <Image
+                      src="/github.png"
+                      width={30}
+                      height={30}
+                      alt="github"
+                    />
                   </a>
                 </div>
               </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { FaExternalLinkAlt, FaGithub, FaLinkedin } from "react-icons/fa";
 import {
   FaReact,
@@ -26,14 +27,14 @@ const iconMapping = {
     <SiTailwindcss title="Tailwind" className="text-xl text-[#06B6D4]" />
   ),
   Nodejs: <FaNodeJs title="Node.js" className="text-xl text-[#68A063]" />,
-  Nextjs: <RiNextjsFill title="Next.js" className="text-xl" />, // Sem cor no techData
-  Express: <SiExpress title="Express" className="text-xl" />, // Sem cor no techData
+  Nextjs: <RiNextjsFill title="Next.js" className="text-xl" />,
+  Express: <SiExpress title="Express" className="text-xl" />,
   MySql: <SiMysql title="MySql" className="text-xl text-[#4784b3]" />,
   Git: <FaGitAlt title="Git" className="text-xl text-[#F1502F]" />,
-  GitHub: <FaGithub title="GitHub" className="text-xl" />, // Sem cor no techData
+  GitHub: <FaGithub title="GitHub" className="text-xl" />,
   Figma: <SiFigma title="Figma" className="text-xl text-[#F24E1E]" />,
   Axios: <SiAxios title="Axios" className="text-xl text-[#5A29E4]" />,
-  Photopea: <SiPhotopea title="Photopea" className="text-xl" />, // Sem cor no techData
+  Photopea: <SiPhotopea title="Photopea" className="text-xl" />,
   APIs: <TbApi title="APIs" className="text-xl text-[#29A8DF]" />,
   TypeScript: (
     <SiTypescript title="TypeScript" className="text-xl text-[#007ACC]" />
@@ -54,7 +55,14 @@ const ProjectCard = ({
   return (
     <div id="projetos" className="card ">
       <div className="row">
-        <img className="project-image rounded-md" src={image} alt={title} />
+        <Image
+          className="project-image rounded-md"
+          width={400}
+          height={400}
+          src={image}
+          alt={title}
+        />
+
         <div className="des">
           <h4>{title}</h4>
           <p>{description}</p>
