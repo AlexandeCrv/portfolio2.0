@@ -8,7 +8,6 @@ import "../components/Footer";
 import "../components/About";
 import "../components/Projetos";
 import "./fonts/fonts.css";
-import "./globals.css";
 
 import NavBar from "../components/Navbar";
 import Stars from "../components/Stars";
