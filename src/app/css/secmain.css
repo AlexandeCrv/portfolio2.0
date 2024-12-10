@@ -1,0 +1,81 @@
+.secmain {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  z-index: 100p x;
+  height: 500px;
+}
+
+.secmainh1h2 {
+  margin-top: 150px;
+  margin-right: 20px;
+  color: #00be70;
+  line-height: 60px;
+}
+
+.txt-animado {
+  text-shadow: #00ad6e 0px 0px 10px;
+  line-height: 30px;
+  font-size: 30px;
+  font-weight: 300;
+  display: block;
+  border-right: 3px #00ad6e solid;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: mark 0.9s step-end infinite, write 5s steps(22, end) infinite;
+  width: 19ch;
+}
+
+@keyframes mark {
+  50% {
+    border-right-color: #1f1f1f;
+  }
+}
+
+@keyframes write {
+  20% {
+    width: 19ch;
+  }
+  70% {
+    width: 19ch;
+  }
+  85% {
+    width: 0;
+  }
+  100% {
+    width: 0z;
+  }
+}
+
+.h1s {
+  font-size: 3.7rem;
+  color: white;
+}
+
+strong {
+  color: #00be70;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.animation2 {
+  width: 300px;
+  height: 300px;
+
+  border-radius: 50%;
+  background-image: url(https://cdn.pixabay.com/photo/2011/12/13/17/07/world-11047_1280.jpg);
+  box-shadow: -25px -25px 25px black inset, 10px 10px 30px white inset,
+    0px 0px 20px #3a96ff;
+  background-size: cover;
+  animation: rotate 20s alternate ease-in-out infinite;
+  transform: rotate(360deg);
+  transition-duration: 1s;
+  cursor: pointer;
+}
+.animation2:hover {
+  transform: scale(1.16);
+  transition-duration: 1.2s;
+}
+@keyframes rotate {
+  to {
+    background-position: 100%;
+  }
+}

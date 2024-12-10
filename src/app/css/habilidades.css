@@ -1,0 +1,100 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.tech-icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  background: rgba(204, 204, 204, 0.05);
+  padding: 35px;
+  width: 100px;
+  border-radius: 15px;
+  box-shadow: 0 3px 6px rgba(204, 204, 204, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+.tech-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(204, 204, 204, 0.6);
+}
+.tech-icon .icon,
+.tech-icon .name {
+  transition: opacity 0.3s ease-in-out;
+  position: absolute;
+  opacity: 1;
+  margin-top: 10px;
+}
+
+.tech-icon .name {
+  opacity: 0;
+
+  font-weight: bold;
+}
+
+.tech-icon::before,
+.tech-icon::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ccc;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.tech-icon::before {
+  top: 0; /* Barra no topo */
+  transform: translateX(-50%) scaleX(0);
+}
+
+.tech-icon::after {
+  bottom: 0; /* Barra na base */
+  transform: translateX(-50%) scaleX(0);
+}
+
+.tech-icon:hover::before,
+.tech-icon:hover::after {
+  transform: translateX(-50%) scaleX(1);
+  background-color: rgba(204, 204, 304, 0.9);
+}
+
+.tech-icon:hover .text-xl {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+.tech-icon:active {
+  transform: scale(0.95);
+  box-shadow: 0 3px 6px rgba(255, 255, 255, 0.1);
+}
+
+.tech-icon.clicked .icon {
+  opacity: 0;
+}
+
+.tech-icon.clicked .name {
+  opacity: 1;
+  animation: showName 0.5s forwards;
+}
+
+@keyframes showName {
+  0% {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.habilidades {
+  background-color: #0b0b0b;
+  padding: 50px 20px;
+}
