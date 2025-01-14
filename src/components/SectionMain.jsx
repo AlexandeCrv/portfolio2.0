@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { PiReadCvLogoDuotone } from "react-icons/pi";
 import { FaLanguage } from "react-icons/fa";
+
 import Image from "next/image";
 function SectionMain() {
   const [isHovered, setIsHovered] = useState(false);
@@ -12,7 +13,7 @@ function SectionMain() {
           <h1 className="h1s">Alexandre Carvalho</h1>
           <div className="txt-animado">Desenvolvedor Front End Web</div>
 
-          <div className="flex w-80 mt-3">
+          <div className=" todasredes flex w-80 mt-3">
             <div
               title="Linkedin"
               className="espelhado-transparente-nav h-12 w-12 bg-[#1f1f1f] rounded-lg flex items-center justify-center"
