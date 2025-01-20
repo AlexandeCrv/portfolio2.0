@@ -13,7 +13,7 @@ function SectionMain() {
           <h1 className="h1s">Alexandre Carvalho</h1>
           <div className="txt-animado">Desenvolvedor Front End Web</div>
 
-          <div className=" todasredes flex w-80 mt-3">
+          <div className="todasredes flex w-80 mt-3">
             <div
               title="Linkedin"
               className="espelhado-transparente-nav h-12 w-12 bg-[#1f1f1f] rounded-lg flex items-center justify-center"
@@ -23,6 +23,7 @@ function SectionMain() {
                 target="_blank"
               >
                 <Image
+                  className="linkedin"
                   width={30}
                   height={30}
                   src="/linkedin.png"
@@ -39,6 +40,7 @@ function SectionMain() {
                 target="_blank"
               >
                 <Image
+                  className="insta"
                   width={30}
                   height={30}
                   src="/insta.png"
@@ -54,7 +56,13 @@ function SectionMain() {
                 href="https://github.com/AlexandeCrv?tab=repositories"
                 target="_blank"
               >
-                <Image width={30} height={30} src="/github.png" alt="GitHub" />
+                <Image
+                  className="github"
+                  width={30}
+                  height={30}
+                  src="/github.png"
+                  alt="GitHub"
+                />
               </a>
             </div>
 
@@ -62,9 +70,9 @@ function SectionMain() {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
               title="Currículo"
-              className="relative espelhado-transparente-nav h-12 w-12 bg-[#1f1f1f] rounded-lg flex items-center justify-center ml-3 cursor-pointer"
+              className="relative  espelhado-transparente-nav h-12 w-12 bg-[#1f1f1f] rounded-lg flex items-center justify-center ml-3 cursor-pointer"
             >
-              <PiReadCvLogoDuotone className="text-3xl text-white" />
+              <PiReadCvLogoDuotone className="text-3xl curriculo text-white" />
               {isHovered && (
                 <div
                   style={{ top: "51px" }}
@@ -106,7 +114,9 @@ function SectionMain() {
             </div>
           </div>
         </div>
-        <div className="animation2 mt-36"></div>
+        <div className="Paidaanimaçao">
+          <div className="animation2 mt-36"></div>
+        </div>
       </section>
     </div>
   );
