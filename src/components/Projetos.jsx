@@ -146,6 +146,25 @@ function Projetos() {
     },
     {
       id: 2,
+      title: "Yu-Gi-Oh",
+      description: "Viage para o mundo de DuelMonsters!",
+      repoLink: "https://github.com/AlexandeCrv/Yu-gi-oh",
+
+      image: "/yugioh.png",
+      frontend: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Nextjs",
+        "React",
+        "Tailwind",
+        "Git",
+        "Photopea",
+      ],
+      backend: ["Nodejs", "Express", "APIs"],
+    },
+    {
+      id: 3,
       title: "Teste de Estagio Fatto",
       description: "Gerenciamento de estoque e valores.",
       repoLink: "https://github.com/AlexandeCrv/EstagioFatto",
@@ -163,7 +182,7 @@ function Projetos() {
       backend: ["Nodejs", "Express", "MySql", , "Docker", "APIs"],
     },
     {
-      id: 3,
+      id: 4,
       title: "Viagens Aéreas",
       description: "Viage pelo mundo conosco!",
       siteLink: "https://alexandecrv.github.io/ViagensAereas/",
@@ -183,7 +202,7 @@ function Projetos() {
       backend: [, "APIs"],
     },
     {
-      id: 4,
+      id: 5,
       title: "The Dog House",
       description: "Para pais de pets!",
       siteLink: "https://alexandecrv.github.io/TheDogHouse/",
@@ -195,7 +214,7 @@ function Projetos() {
       backend: ["APIs"],
     },
     {
-      id: 5,
+      id: 6,
       title: "GitHub Finder RPG",
       description: "Um app para amantes de RPGs!",
       siteLink: "https://alexandecrv.github.io/GitHubFinderRpg/",
@@ -207,7 +226,7 @@ function Projetos() {
       backend: ["TypeScript", "APIs"],
     },
     {
-      id: 6,
+      id: 7,
       title: "React To-Do List RPG",
       description: "Organize tarefas em um universo de RPG!",
       siteLink: "https://alexandecrv.github.io/ReactTodoList/",
@@ -218,7 +237,7 @@ function Projetos() {
       backend: [],
     },
     {
-      id: 7,
+      id: 8,
       title: "Super Nintendo World",
       description:
         "Reviva a nostalgia com jogos icônicos e clássicos da Nintendo!",
