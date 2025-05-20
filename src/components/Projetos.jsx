@@ -8,6 +8,8 @@ import { RiGeminiFill } from "react-icons/ri";
 import { SiAxios } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiPhotopea } from "react-icons/si";
+import { SiMongodb } from "react-icons/si";
+
 import { TbApi } from "react-icons/tb";
 import { SiTypescript } from "react-icons/si";
 import { FaDocker } from "react-icons/fa";
@@ -30,6 +32,7 @@ const iconMapping = {
   TypeScript: <SiTypescript title="TypeScript" className="text-xl text-[#007ACC]" />,
   Docker: <FaDocker title="Docker" className="text-xl text-[#2496ED]" />,
   Gemini: <RiGeminiFill title="Gemini" className="text-xl text-[#007ACC]" />,
+  Mongodb: <SiMongodb title="MongoDB" className="text-xl text-[#007ACC]" />,
 };
 const ProjectCard = ({
   id,
@@ -138,7 +141,7 @@ function Projetos() {
         "https://www.linkedin.com/feed/update/urn:li:activity:7330697884780204032/",
       image: "/fundo.png",
       frontend: ["CSS", "JavaScript", "Tailwind", "Nextjs", "Git", "Photopea"],
-      backend: ["Nodejs", "Express", "Gemini", "APIs"],
+      backend: ["Nodejs", "Express", "Gemini", "APIs", "Mongodb"],
     },
 
     {

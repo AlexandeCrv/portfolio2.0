@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+"use client";
+
+import { useState } from "react";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -16,6 +18,7 @@ import {
   SiTypescript,
   SiFigma,
   SiAxios,
+  SiMongodb,
   SiPhotopea,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
@@ -31,9 +34,7 @@ const techData = [
     name: "CSS",
   },
   {
-    icon: (
-      <SiJavascript title="JavaScript" className="text-2xl text-[#F7DF1E]" />
-    ),
+    icon: <SiJavascript title="JavaScript" className="text-2xl text-[#F7DF1E]" />,
     name: "JavaScript",
   },
   {
@@ -41,9 +42,7 @@ const techData = [
     name: "React",
   },
   {
-    icon: (
-      <SiTailwindcss title="Tailwind" className="text-2xl text-[#06B6D4]" />
-    ),
+    icon: <SiTailwindcss title="Tailwind" className="text-2xl text-[#06B6D4]" />,
     name: "Tailwind",
   },
   {
@@ -51,11 +50,11 @@ const techData = [
     name: "Node.js",
   },
   {
-    icon: <RiNextjsFill title="Next.js" className="text-2xl " />,
+    icon: <RiNextjsFill title="Next.js" className="text-2xl" />,
     name: "Next.js",
   },
   {
-    icon: <SiExpress title="Express" className="text-2xl " />,
+    icon: <SiExpress title="Express" className="text-2xl" />,
     name: "Express",
   },
   {
@@ -67,7 +66,7 @@ const techData = [
     name: "Git",
   },
   {
-    icon: <FaGithub title="GitHub" className="text-2xl " />,
+    icon: <FaGithub title="GitHub" className="text-2xl" />,
     name: "GitFlow",
   },
   {
@@ -79,7 +78,7 @@ const techData = [
     name: "Axios",
   },
   {
-    icon: <SiPhotopea title="Photopea" className="text-2xl " />,
+    icon: <SiPhotopea title="Photopea" className="text-2xl" />,
     name: "Photopea",
   },
   {
@@ -87,14 +86,16 @@ const techData = [
     name: "APIs",
   },
   {
-    icon: (
-      <SiTypescript title="TypeScript" className="text-2xl text-[#007ACC]" />
-    ),
+    icon: <SiTypescript title="TypeScript" className="text-2xl text-[#007ACC]" />,
     name: "TypeScript",
   },
   {
     icon: <FaDocker title="Docker" className="text-2xl text-[#2496ED]" />,
     name: "Docker",
+  },
+  {
+    icon: <SiMongodb title="MongoDB" className="text-2xl text-[#68A063]" />,
+    name: "MongoDB",
   },
 ];
 
@@ -110,9 +111,9 @@ const Habilidades = () => {
   };
 
   return (
-    <section id="habilidades" className="habilidades mb-44 ">
-      <h1>Habilidades</h1>
-      <div className="grid">
+    <section id="habilidades" className="bg-[#0b0b0b] py-12 px-4 md:px-6 mb-44">
+      <h1 className="text-center text-2xl md:text-3xl font-bold mb-10">Habilidades</h1>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 justify-items-center max-w-6xl mx-auto">
         {techData.map((tech, index) => (
           <div
             key={index}
@@ -120,7 +121,6 @@ const Habilidades = () => {
             onClick={() => handleClick(index)}
           >
             <div className={`icon ${tech.colorClass}`}>{tech.icon}</div>
-
             <div className="name">{tech.name}</div>
           </div>
         ))}
