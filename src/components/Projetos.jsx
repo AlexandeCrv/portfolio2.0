@@ -1,15 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import { FaExternalLinkAlt, FaGithub, FaLinkedin } from "react-icons/fa";
-import {
-  FaReact,
-  FaHtml5,
-  FaCss3Alt,
-  FaNodeJs,
-  FaGitAlt,
-} from "react-icons/fa";
+import { FaReact, FaHtml5, FaCss3Alt, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 import { SiJavascript, SiTailwindcss, SiMysql, SiFigma } from "react-icons/si";
+import { RiGeminiFill } from "react-icons/ri";
 import { SiAxios } from "react-icons/si";
 import { SiExpress } from "react-icons/si";
 import { SiPhotopea } from "react-icons/si";
@@ -19,13 +14,9 @@ import { FaDocker } from "react-icons/fa";
 const iconMapping = {
   HTML: <FaHtml5 title="HTML" className="text-xl text-[#E34F26]" />,
   CSS: <FaCss3Alt title="CSS" className="text-xl text-[#1572B6]" />,
-  JavaScript: (
-    <SiJavascript title="JavaScript" className="text-xl text-[#F7DF1E]" />
-  ),
+  JavaScript: <SiJavascript title="JavaScript" className="text-xl text-[#F7DF1E]" />,
   React: <FaReact title="React" className="text-xl text-[#61DBFB]" />,
-  Tailwind: (
-    <SiTailwindcss title="Tailwind" className="text-xl text-[#06B6D4]" />
-  ),
+  Tailwind: <SiTailwindcss title="Tailwind" className="text-xl text-[#06B6D4]" />,
   Nodejs: <FaNodeJs title="Node.js" className="text-xl text-[#68A063]" />,
   Nextjs: <RiNextjsFill title="Next.js" className="text-xl" />,
   Express: <SiExpress title="Express" className="text-xl" />,
@@ -36,10 +27,9 @@ const iconMapping = {
   Axios: <SiAxios title="Axios" className="text-xl text-[#5A29E4]" />,
   Photopea: <SiPhotopea title="Photopea" className="text-xl" />,
   APIs: <TbApi title="APIs" className="text-xl text-[#29A8DF]" />,
-  TypeScript: (
-    <SiTypescript title="TypeScript" className="text-xl text-[#007ACC]" />
-  ),
+  TypeScript: <SiTypescript title="TypeScript" className="text-xl text-[#007ACC]" />,
   Docker: <FaDocker title="Docker" className="text-xl text-[#2496ED]" />,
+  Gemini: <RiGeminiFill title="Gemini" className="text-xl text-[#007ACC]" />,
 };
 const ProjectCard = ({
   id,
@@ -77,12 +67,7 @@ const ProjectCard = ({
                 <FaExternalLinkAlt /> Visite o site
               </a>
             )}
-            <a
-              href={repoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn"
-            >
+            <a href={repoLink} target="_blank" rel="noopener noreferrer" className="btn">
               <FaGithub /> Repositório
             </a>
             {linkedinLink && (
@@ -127,8 +112,7 @@ function Projetos() {
       id: 1,
       title: "Que que bilda?",
       description: "Consulte as infos da sua conta de Legue of Legends!",
-      repoLink:
-        "https://github.com/AlexandeCrv/nextlol/tree/main/front/src/app",
+      repoLink: "https://github.com/AlexandeCrv/nextlol/tree/main/front/src/app",
       linkedinLink:
         "https://www.linkedin.com/feed/update/urn:li:activity:7252081330652405760/",
       image: "/lol.png",
@@ -146,6 +130,19 @@ function Projetos() {
     },
     {
       id: 2,
+      title: "Cadê Meu Dinheiro?",
+      description: "Organizador financeiro !",
+      siteLink: "https://cheerful-patience-production.up.railway.app/",
+      repoLink: "https://github.com/AlexandeCrv/cademeudinheiro-",
+      linkedinLink:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7330697884780204032/",
+      image: "/fundo.png",
+      frontend: ["CSS", "JavaScript", "Tailwind", "Nextjs", "Git", "Photopea"],
+      backend: ["Nodejs", "Express", "Gemini", "APIs"],
+    },
+
+    {
+      id: 3,
       title: "Yu-Gi-Oh",
       description: "Viage para o mundo de DuelMonsters!",
       repoLink: "https://github.com/AlexandeCrv/Yu-gi-oh",
@@ -164,25 +161,17 @@ function Projetos() {
       backend: ["Nodejs", "Express", "APIs"],
     },
     {
-      id: 3,
+      id: 4,
       title: "Teste de Estagio Fatto",
       description: "Gerenciamento de estoque e valores.",
       repoLink: "https://github.com/AlexandeCrv/EstagioFatto",
 
       image: "/tarefas.png",
-      frontend: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Nextjs",
-        "Tailwind",
-        "Git",
-        "Photopea",
-      ],
+      frontend: ["HTML", "CSS", "JavaScript", "Nextjs", "Tailwind", "Git", "Photopea"],
       backend: ["Nodejs", "Express", "MySql", , "Docker", "APIs"],
     },
     {
-      id: 4,
+      id: 5,
       title: "Viagens Aéreas",
       description: "Viage pelo mundo conosco!",
       siteLink: "https://alexandecrv.github.io/ViagensAereas/",
@@ -190,19 +179,11 @@ function Projetos() {
       linkedinLink:
         "https://www.linkedin.com/posts/alexandre-carvalho-4b178a26b_boa-noite-gente-o-projeto-mais-complicado-activity-7211143279495544833-u4Sh?utm_source=share&utm_medium=member_desktop",
       image: "/gi.png",
-      frontend: [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "React",
-        "Figma",
-        "Git",
-        "Photopea",
-      ],
+      frontend: ["HTML", "CSS", "JavaScript", "React", "Figma", "Git", "Photopea"],
       backend: [, "APIs"],
     },
     {
-      id: 5,
+      id: 6,
       title: "The Dog House",
       description: "Para pais de pets!",
       siteLink: "https://alexandecrv.github.io/TheDogHouse/",
@@ -214,7 +195,7 @@ function Projetos() {
       backend: ["APIs"],
     },
     {
-      id: 6,
+      id: 7,
       title: "GitHub Finder RPG",
       description: "Um app para amantes de RPGs!",
       siteLink: "https://alexandecrv.github.io/GitHubFinderRpg/",
@@ -226,7 +207,7 @@ function Projetos() {
       backend: ["TypeScript", "APIs"],
     },
     {
-      id: 7,
+      id: 8,
       title: "React To-Do List RPG",
       description: "Organize tarefas em um universo de RPG!",
       siteLink: "https://alexandecrv.github.io/ReactTodoList/",
@@ -237,10 +218,9 @@ function Projetos() {
       backend: [],
     },
     {
-      id: 8,
+      id: 9,
       title: "Super Nintendo World",
-      description:
-        "Reviva a nostalgia com jogos icônicos e clássicos da Nintendo!",
+      description: "Reviva a nostalgia com jogos icônicos e clássicos da Nintendo!",
       siteLink: "https://alexandecrv.github.io/NintendoWorld/skidrow.html",
       repoLink: "https://github.com/alexandecrv/NintendoWorld",
       linkedinLink: "https://linkedin.com/in/alexandecrv/super-nintendo-world",
