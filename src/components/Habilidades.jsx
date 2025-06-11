@@ -20,6 +20,8 @@ import {
   SiAxios,
   SiMongodb,
   SiPhotopea,
+  FaPhoenixFramework,
+  SiElixir,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import { TbApi } from "react-icons/tb";
@@ -96,6 +98,14 @@ const techData = [
   {
     icon: <SiMongodb title="MongoDB" className="text-2xl text-[#68A063]" />,
     name: "MongoDB",
+  },
+  {
+    icon: <SiElixir title="Elixir" className="text-2xl text-[#68A063]" />,
+    name: "Elixir",
+  },
+  {
+    icon: <FaPhoenixFramework title="Phoenix" className="text-2xl text-[#68A063]" />,
+    name: "Phoenix",
   },
 ];
 
