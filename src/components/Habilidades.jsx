@@ -100,11 +100,12 @@ const techData = [
     name: "MongoDB",
   },
   {
-    icon: <SiElixir title="Elixir" className="text-2xl text-[#68A063]" />,
+    icon: <SiElixir title="Elixir" className="text-2xl text-[#6e4a7e]" />,
     name: "Elixir",
   },
+
   {
-    icon: <FaPhoenixFramework title="Phoenix" className="text-2xl text-[#68A063]" />,
+    icon: <FaPhoenixFramework title="Phoenix" className="text-2xl text-[#F05440]" />,
     name: "Phoenix",
   },
 ];
