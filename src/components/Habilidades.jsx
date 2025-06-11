@@ -7,6 +7,7 @@ import {
   FaReact,
   FaNodeJs,
   FaDocker,
+  FaPhoenixFramework,
   FaGitAlt,
   FaGithub,
 } from "react-icons/fa";
@@ -20,7 +21,6 @@ import {
   SiAxios,
   SiMongodb,
   SiPhotopea,
-  FaPhoenixFramework,
   SiElixir,
 } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
