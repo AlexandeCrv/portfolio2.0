@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from "react";
 import { PiReadCvLogoDuotone } from "react-icons/pi";
 import { FaLanguage } from "react-icons/fa";
@@ -114,9 +115,9 @@ function SectionMain() {
             </div>
           </div>
         </div>
-        <div className="Paidaanimaçao">
+      
           <div className="animation2 mt-36"></div>
-        </div>
+       
       </section>
     </div>
   );

@@ -9,6 +9,7 @@ import "../components/About";
 import "../components/Projetos";
 import "./fonts/fonts.css";
 import "./css/responsivo.css";
+import "./css/xp.css"
 import NavBar from "../components/Navbar";
 import Stars from "../components/Stars";
 import SectionMain from "../components/SectionMain";
@@ -16,6 +17,7 @@ import Footer from "../components/Footer";
 import About from "../components/About";
 import Projetos from "../components/Projetos";
 import Habilidades from "@/components/Habilidades";
+import Xp from "@/components/Experiencia"
 
 export default function Home() {
   return (
@@ -26,6 +28,7 @@ export default function Home() {
           <Stars />
           <SectionMain />
           <About />
+          <Xp/>
         </section>
         <Projetos />
         <Habilidades />

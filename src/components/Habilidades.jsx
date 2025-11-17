@@ -123,7 +123,7 @@ const Habilidades = () => {
 
   return (
     <section id="habilidades" className="bg-[#0b0b0b] py-12 px-4 md:px-6 mb-44">
-      <h1 className="text-center text-2xl md:text-3xl font-bold mb-10">Habilidades</h1>
+      <h1 className="section-title mb-10">Habilidades</h1>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6 justify-items-center max-w-6xl mx-auto">
         {techData.map((tech, index) => (
           <div

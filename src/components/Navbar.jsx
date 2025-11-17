@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useCallback } from "react";
 import { FaHome, FaUser, FaProjectDiagram, FaCog } from "react-icons/fa";
+import { MdOutlineWorkspacePremium } from "react-icons/md";
 
 function NavBar() {
   const [isVisible, setIsVisible] = useState(true);
@@ -62,6 +63,16 @@ function NavBar() {
             <li className="espelhado-transparente-nav">
               <a
                 className="inline-flex items-center px-4 py-2 text-lg font-medium text-gray-500 no-underline rounded-md transition duration-300 ease-in-out transform hover:text-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400"
+                href="#xp"
+              >
+                <MdOutlineWorkspacePremium className="mr-2 text-2xl" />
+                Experiência
+              </a>
+            </li>
+
+            <li className="espelhado-transparente-nav">
+              <a
+                className="inline-flex items-center px-4 py-2 text-lg font-medium text-gray-500 no-underline rounded-md transition duration-300 ease-in-out transform hover:text-white hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-400"
                 href="#projetos"
               >
                 <FaProjectDiagram className="mr-2 text-2xl" />
@@ -78,6 +89,7 @@ function NavBar() {
                 Habilidades
               </a>
             </li>
+        
           </ul>
         </nav>
         <div className="mt-3">

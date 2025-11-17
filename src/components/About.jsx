@@ -28,7 +28,7 @@ function About() {
     <div id="divsobremim">
       <section id="sobremim" className="sobremim mb-44 ">
         <div>
-          <h1 className="h1s2 mb-10">Minha órbita</h1>
+          <h1 className="section-title mb-10">Minha órbita</h1>
         </div>
         <div className="descriçãosec2">
           <div className="coluna-texto esquerda ml-12 ">

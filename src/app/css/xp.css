@@ -1,0 +1,634 @@
+/* Experience Section - Black and White Neon Theme */
+.experiencia-section {
+  width: 100%;
+  background-color: #0b0b0b;
+  padding: 80px 20px;
+  margin-bottom: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Particle Background */
+.particle-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  /* Changed particle gradient to white/gray for black and white theme */
+  background: radial-gradient(circle, #ffffff, rgba(255, 255, 255, 0.2));
+  border-radius: 50%;
+  animation: float-up 5s infinite ease-in;
+}
+
+@keyframes float-up {
+  from {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-100vh) translateX(var(--tx, 0));
+    opacity: 0;
+  }
+}
+
+/* Orbital Background */
+.orbital-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 600px;
+  transform: translate(-50%, -50%);
+  /* Changed gradient to white tones instead of blue/orange */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, rgba(200, 200, 200, 0.02) 100%);
+  border-radius: 50%;
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 2;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  /* Changed gradient to white/gray instead of blue/orange */
+  background: linear-gradient(90deg, #ffffff, #cccccc);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-family: "Audiowide", sans-serif;
+  letter-spacing: 2px;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #a0a0a0;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+/* Timeline Container */
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  /* Changed gradient to white instead of blue/orange */
+  background: linear-gradient(180deg, #ffffff, #888888, transparent);
+  transform: translateX(-50%) scaleY(0);
+  transform-origin: top;
+  transition: transform 0.6s ease;
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: relative;
+}
+
+/* Experience Card */
+.experience-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 20px;
+  align-items: center;
+  animation: cardEntrance 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* Added connection line between cards for visual flow */
+.connection-line {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  width: 2px;
+  height: 50px;
+  background: linear-gradient(180deg, transparent, rgba(255, 255, 255, 0.2));
+  transform: translateX(-50%);
+  animation: lineGrow 0.6s ease-out;
+}
+
+@keyframes lineGrow {
+  from {
+    opacity: 0;
+    height: 0;
+  }
+  to {
+    opacity: 1;
+    height: 50px;
+  }
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Added ::after pseudo-element for hover line effect like projects */
+.card-content::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background-color: rgba(204, 204, 204, 0.4);
+  border-radius: 0 0 4px 4px;
+  transition: background-color 0.3s, transform 0.3s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.card-content:hover::after {
+  transform: scaleX(1);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.experience-card:hover {
+  .card-content {
+    /* Changed border and shadow to use white/gray instead of blue */
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(204, 204, 204, 0.15);
+  }
+}
+
+/* Orbital Indicator */
+.timeline-indicator {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  z-index: 3;
+}
+
+.orbital-ring {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  /* Changed border to white instead of blue */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  animation: ggirar 8s linear infinite;
+}
+
+.station-dot {
+  width: 20px;
+  height: 20px;
+  /* Changed gradient to white instead of blue/orange */
+  background: linear-gradient(135deg, #ffffff, #cccccc);
+  border-radius: 50%;
+  border: 3px solid #0b0b0b;
+  /* Changed box-shadow to white glow instead of blue/orange */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(200, 200, 200, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes ggirar {
+  from {
+    transform: ggirar(0deg);
+  }
+  to {
+    transform: ggirar(360deg);
+  }
+}
+
+.experience-card.active .station-dot {
+  width: 28px;
+  height: 28px;
+  /* Changed pulse glow to white instead of blue/orange */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 60px rgba(200, 200, 200, 0.4);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+/* Card Content */
+.card-content {
+  background: rgba(20, 20, 30, 0.6);
+  backdrop-filter: blur(10px);
+  /* Changed border color to white/gray instead of blue */
+  border: 1px solid rgba(204, 204, 204, 0.15);
+  border-radius: 16px;
+  padding: 28px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.card-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  /* Changed gradient to white shine instead of blue */
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  opacity: 0;
+  transition: left 0.5s ease;
+}
+
+.card-content:hover::before {
+  left: 100%;
+}
+
+.card-content:hover {
+  background: rgba(20, 20, 35, 0.8);
+  /* Changed border to white/gray instead of blue */
+  border-color: rgba(204, 204, 204, 0.25);
+  transform: translateY(-5px);
+}
+
+.experience-card.active {
+  /* Added glow effect when card is active */
+  z-index: 10;
+}
+
+.experience-card.active .card-content {
+  background: rgba(20, 20, 35, 0.95);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.15), 0 12px 48px rgba(204, 204, 204, 0.12);
+  transform: translateY(-8px);
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.header-info {
+  text-align: left;
+}
+
+.company-logo-wrapper {
+  width: 50px;
+  height: 50px;
+  /* Changed background to white/gray theme instead of blue */
+  background: rgba(204, 204, 204, 0.08);
+  border: 1px solid rgba(204, 204, 204, 0.15);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.card-content:hover .company-logo-wrapper {
+  background: rgba(204, 204, 204, 0.12);
+  border-color: rgba(204, 204, 204, 0.25);
+  /* Changed shadow to white glow */
+  box-shadow: 0 0 15px rgba(204, 204, 204, 0.1);
+}
+
+.company-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
+}
+
+.company-name {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 4px;
+  font-family: "Audiowide", sans-serif;
+  letter-spacing: 1px;
+}
+
+.role {
+  font-size: 0.95rem;
+  /* Changed color to white instead of blue */
+  color: #cccccc;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Added active indicator pulse animation */
+.period-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.active-indicator {
+  width: 8px;
+  height: 8px;
+  background: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+  animation: indicatorPulse 2s ease-in-out infinite;
+}
+
+@keyframes indicatorPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    transform: scale(1.4);
+    box-shadow: 0 0 24px rgba(255, 255, 255, 1);
+  }
+}
+
+.period-badge {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+  white-space: nowrap;
+  /* Changed background/border to white/gray instead of orange */
+  background: rgba(204, 204, 204, 0.05);
+  border: 1px solid rgba(204, 204, 204, 0.2);
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.card-content:hover .period-badge {
+  background: rgba(204, 204, 204, 0.1);
+  border-color: rgba(204, 204, 204, 0.3);
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #d0d0d0;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Expandable Content */
+.expandable-content {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(204, 204, 204, 0.15);
+  animation: slideDown 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+    max-height: 0;
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    max-height: 500px;
+  }
+}
+
+.achievements h4,
+.tech-stack h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  /* Changed color to white instead of blue */
+  color: #ffffff;
+  margin-bottom: 12px;
+  font-family: "Audiowide", sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.achievements li {
+  font-size: 0.9rem;
+  color: #c0c0c0;
+  padding: 8px 0 8px 8px;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  animation: itemFadeIn 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes itemFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.bullet {
+  /* Changed color to white instead of orange */
+  color: #ffffff;
+  margin-right: 8px;
+  font-weight: bold;
+}
+
+.achievements li:hover {
+  color: #ffffff;
+  padding-left: 16px;
+  transform: translateX(4px);
+}
+
+/* Tech Stack */
+.tech-stack {
+  margin-top: 0;
+}
+
+.tech-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: rgba(204, 204, 204, 0.05);
+  border: 1px solid rgba(204, 204, 204, 0.15);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  animation: badgeFadeIn 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes badgeFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.tech-badge::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  /* Changed radial gradient to white instead of blue */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tech-badge:hover {
+  background: rgba(204, 204, 204, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.2) translateY(-6px);
+  box-shadow: 0 8px 24px rgba(204, 204, 204, 0.2), 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.tech-badge:hover::before {
+  opacity: 1;
+}
+
+/* Alternating Layout */
+.experience-card:nth-child(odd) {
+  direction: rtl;
+}
+
+.experience-card:nth-child(odd) .card-content {
+  direction: ltr;
+}
+
+.experience-card:nth-child(odd) .header-info {
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 0;
+  }
+
+  .experience-card {
+    grid-template-columns: 30px 1fr;
+    gap: 16px;
+  }
+
+  .experience-card:nth-child(odd) {
+    direction: ltr;
+  }
+
+  .card-content {
+    grid-column: 2;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .cards-wrapper {
+    gap: 30px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .period-badge {
+    margin-top: 8px;
+  }
+
+  .orbital-background {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .experiencia-section {
+    padding: 40px 16px;
+    margin-bottom: 100px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .role {
+    font-size: 0.85rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+
+  .tech-icons {
+    gap: 8px;
+  }
+
+  .tech-badge {
+    width: 44px;
+    height: 44px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+}
