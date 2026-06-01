@@ -236,7 +236,6 @@ function Projetos() {
   return (
     <section id="projetos" className="projetos mb-44 ">
       <div>
-        {" "}
         <h1 className="section-title">Projetos Relevantes</h1>
       </div>
 
