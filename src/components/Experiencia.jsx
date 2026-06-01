@@ -125,29 +125,7 @@ export default function Experiencia() {
   }, [])
 
   const experiencias = [
-    {
-      company: "Z3 Smart Digital",
-      role: "Desenvolvedor Front-End",
-      period: "Out 2024 - Jan 2025",
-      logo: "/z3.avif",
-      description:
-        "Criação de novas funcionalidades performáticas focando em otimização de performance da aplicação e melhorias na tela do card game.",
-      achievements: [
-        "Desenvolvimento de funcionalidades performáticas para o card game",
-        "Otimização de performance do site e aplicação",
-        "Implementação de melhorias na experiência do usuário",
-        "Colaboração com equipe de design para UI/UX",
-      ],
-      technologies: [
-        { name: "Next.js", icon: <RiNextjsFill className="text-xl text-white" /> },
-        { name: "React", icon: <FaReact className="text-xl text-[#61DBFB]" /> },
-        { name: "TypeScript", icon: <SiTypescript className="text-xl text-[#007ACC]" /> },
-        { name: "Tailwind", icon: <SiTailwindcss className="text-xl text-[#06B6D4]" /> },
-        { name: "JavaScript", icon: <SiJavascript className="text-xl text-[#F7DF1E]" /> },
-        { name: "Git", icon: <FaGitAlt className="text-xl text-[#F1502F]" /> },
-      ],
-    },
-    {
+     {
       company: "Ingresse",
       role: "Desenvolvedor Front-End Elixir (Jr)",
       period: "Jun 2025 - Atual",
@@ -172,6 +150,29 @@ export default function Experiencia() {
         { name: "APIs", icon: <TbApi className="text-xl text-[#29A8DF]" /> },
       ],
     },
+    {
+      company: "Z3 Smart Digital",
+      role: "Desenvolvedor Front-End",
+      period: "Out 2024 - Jan 2025",
+      logo: "/z3.avif",
+      description:
+        "Criação de novas funcionalidades performáticas focando em otimização de performance da aplicação e melhorias na tela do card game.",
+      achievements: [
+        "Desenvolvimento de funcionalidades performáticas para o card game",
+        "Otimização de performance do site e aplicação",
+        "Implementação de melhorias na experiência do usuário",
+        "Colaboração com equipe de design para UI/UX",
+      ],
+      technologies: [
+        { name: "Next.js", icon: <RiNextjsFill className="text-xl text-white" /> },
+        { name: "React", icon: <FaReact className="text-xl text-[#61DBFB]" /> },
+        { name: "TypeScript", icon: <SiTypescript className="text-xl text-[#007ACC]" /> },
+        { name: "Tailwind", icon: <SiTailwindcss className="text-xl text-[#06B6D4]" /> },
+        { name: "JavaScript", icon: <SiJavascript className="text-xl text-[#F7DF1E]" /> },
+        { name: "Git", icon: <FaGitAlt className="text-xl text-[#F1502F]" /> },
+      ],
+    },
+   
   ]
 
   return (
